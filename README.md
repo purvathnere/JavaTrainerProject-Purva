@@ -137,7 +137,7 @@ Go to https://render.com
 
 - Connect GitHub repo: JavaTrainerProject-Purva
 
-- Fill:
+- Fill   :
 
 Field	          Value
 Name	:         purva-machine-test
