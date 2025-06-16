@@ -2,7 +2,7 @@
 
 A Spring Boot-based training batch management system with automatic trainer allocation and batch recommendations for students.
 
---
+
 
 ##  Project Overview
 
