@@ -11,7 +11,7 @@ This project was created as part of the Java Trainer Machine Test. It includes R
 - Automatically assign the best available trainer to a batch
 - Recommend suitable batches to students based on subject, past courses, and availability
 
---
+
 
 ## Features
 
@@ -26,23 +26,25 @@ This project was created as part of the Java Trainer Machine Test. It includes R
 ---
 
 ##  Project Structure
-src/
-└── main/
-└── java/
-└── com/purva/trainingplatform/
-├── controller/
-├── service/
-├── repository/
-├── model/
-├── dto/
-├── exception/
-└── util/
-Dockerfile
-README.md
-pom.xml
-
-
----
+• JavaTrainerProject-Purva/
+• Dockerfile
+• README.md
+• pom.xml
+• mvnw
+• mvnw.cmd
+• src/
+• main/
+• java/
+• com/
+• purva/
+• trainingplatform/
+• controller/
+• service/
+• repository/
+• model/
+• dto/
+• exception/
+• util/
 
 ##  Questions 
 
@@ -60,12 +62,11 @@ public StudentController(StudentService studentService) {
 
 ### 2. How would you explain the trainer assignment logic to students?
 The trainer assignment logic follows these steps:
+-  Filter trainers who are experts in the batch subject.
 
-1.) Filter trainers who are experts in the batch subject.
+- Exclude trainers who are already booked during the batch period.
 
-2.) Exclude trainers who are already booked during the batch period.
-
-3.) Sort remaining trainers:
+-  Sort remaining trainers:
 
  -Highest rating first
 
@@ -74,11 +75,11 @@ The trainer assignment logic follows these steps:
 ### 3. Why did you choose your architecture and flow?
 I used a layered architecture with:
 
-1.)Controller → handles HTTP requests
+- Controller → handles HTTP requests
 
-2.)Service → contains business logic
+- Service → contains business logic
 
-3.) Repository → handles database operations
+- Repository → handles database operations
 
 This keeps code organized, testable, and easy to extend. It also follows industry-standard practices for Spring Boot apps.
 
@@ -132,27 +133,27 @@ CMD ["java", "-jar", "target/trainingplatform-0.0.1-SNAPSHOT.jar"]
 
 Go to https://render.com
 
-1) New > Web Service
+-  New > Web Service
 
-2) Connect GitHub repo: JavaTrainerProject-Purva
+- Connect GitHub repo: JavaTrainerProject-Purva
 
-3) Fill:
+- Fill:
 
-Field	Value
-Name	:purva-machine-test
-Environment:	Docker
-Branch	:main
+Field	          Value
+Name	:         purva-machine-test
+Environment:	  Docker
+Branch	:           main
 Dockerfile Path	./Dockerfile
-Port	:8080
-Instance Type	:Free
+Port	:               8080
+Instance Type	:      Free
 
-4) Click Deploy
+- Click Deploy
 
 
 
-Final Links
-🔗 GitHub Repo
+### Final Links
+🔗 - GitHub Repo
 https://github.com/purvathnere/JavaTrainerProject-Purva
 
-🔗 Live Demo on Render
+🔗 - Live Demo on Render
 https://purva-machine-test.onrender.com
