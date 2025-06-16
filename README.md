@@ -2,7 +2,7 @@
 
 A Spring Boot-based training batch management system with automatic trainer allocation and batch recommendations for students.
 
----
+--
 
 ##  Project Overview
 
@@ -11,7 +11,7 @@ This project was created as part of the Java Trainer Machine Test. It includes R
 - Automatically assign the best available trainer to a batch
 - Recommend suitable batches to students based on subject, past courses, and availability
 
----
+--
 
 ## Features
 
@@ -61,51 +61,49 @@ public StudentController(StudentService studentService) {
 ### 2. How would you explain the trainer assignment logic to students?
 The trainer assignment logic follows these steps:
 
-Filter trainers who are experts in the batch subject.
+1.) Filter trainers who are experts in the batch subject.
 
-Exclude trainers who are already booked during the batch period.
+2.) Exclude trainers who are already booked during the batch period.
 
-Sort remaining trainers:
+3.) Sort remaining trainers:
 
-Highest rating first
+ -Highest rating first
 
-Then by lowest workload (fewer batches assigned)
+-Then by lowest workload (fewer batches assigned)
 
 ### 3. Why did you choose your architecture and flow?
 I used a layered architecture with:
 
-Controller → handles HTTP requests
+1.)Controller → handles HTTP requests
 
-Service → contains business logic
+2.)Service → contains business logic
 
-Repository → handles database operations
+3.) Repository → handles database operations
 
 This keeps code organized, testable, and easy to extend. It also follows industry-standard practices for Spring Boot apps.
 
 
 ### API Endpoints
 ## Student
-POST /api/students – Add student
+- POST /api/students – Add student
 
-GET /api/students/{id} – Get student by ID
+- GET /api/students/{id} – Get student by ID
 
-PUT /api/students/{id} – Update student
+- PUT /api/students/{id} – Update student
 
-DELETE /api/students/{id} – Delete student
+- DELETE /api/students/{id} – Delete student
 
-GET /api/students/{id}/recommendations – Get batch recommendations for student
+- GET /api/students/{id}/recommendations – Get batch recommendations for student
 
 ##  Trainer
-POST /api/trainers – Add trainer
-
-(You can add more trainer endpoints as needed)
+- POST /api/trainers – Add trainer
 
 ## Batch
-POST /api/batches – Add batch
+- POST /api/batches – Add batch
 
-GET /api/batches/subject/{subject} – Get batches by subject
+- GET /api/batches/subject/{subject} – Get batches by subject
 
-POST /api/batches/{batchId}/assign-trainer – Assign best trainer to batch
+- POST /api/batches/{batchId}/assign-trainer – Assign best trainer to batch
 
 ### Docker Instructions
 
